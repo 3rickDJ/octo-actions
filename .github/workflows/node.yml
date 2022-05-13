@@ -4,4 +4,11 @@ jobs:
   check-jest-version:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install --save-dev jest
+      - run: npm test
       - run: echo "🍏 This job's status is ${{ job.status }}."
