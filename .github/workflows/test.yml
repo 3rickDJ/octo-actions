@@ -1,19 +1,19 @@
-name: GitHub Actions Demo
+name: Test un every push to GitHub
 on: [push]
 jobs:
   check-jest-version:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: ls -la
+      # - run: pwd
+      # - run: ls -la
       - uses: actions/checkout@v3
-      - run: pwd
-      - run: ls -la
+      # - run: pwd
+      # - run: ls -la
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: pwd
-      - run: ls -la
+      # - run: pwd
+      # - run: ls -la
       - run: npm install --save-dev jest
       - run: npm test
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      # - run: echo "🍏 This job's status is ${{ job.status }}."
