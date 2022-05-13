@@ -6,7 +6,6 @@ describe('Unit tests for Reader', () => {
   test('1) read JSON file', () => {
     //NOTE: in any other case, take the relative path from where you did the command
     const explorers = Reader.readJsonFile('./explorers.json')
-    // expect(explorers).not.toBeUndefined()
-    expect(explorers).toBe(1) // trying to break jest in github actions, what would Jest do?
+    expect(explorers).not.toBeUndefined()
   })
 })
